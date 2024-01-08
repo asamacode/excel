@@ -1091,7 +1091,7 @@ class Sheet {
     cell._value = value;
     
     if (value.runtimeType == DateCellValue) {
-      cell._cellStyle = CellStyle(numberFormat: NumFormat.standard_14);
+      cell._cellStyle = CellStyle(numberFormat: CustomDateTimeNumFormat(formatCode: 'dd/MM/yyyy'));
     } else {
       cell._cellStyle = CellStyle();
     }
